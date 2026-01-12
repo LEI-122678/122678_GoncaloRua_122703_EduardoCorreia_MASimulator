@@ -1,0 +1,333 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram id="class-diagram" name="MASSimulator Class Diagram">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="accao-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Accao" vertex="1">
+          <mxGeometry height="100" width="160" x="-260" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="accao-attrs" parent="accao-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- dx: int&#xa;- dy: int" vertex="1">
+          <mxGeometry height="40" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="accao-line" parent="accao-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="160" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="accao-methods" parent="accao-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ __repr__()" vertex="1">
+          <mxGeometry height="26" width="160" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Sensor" vertex="1">
+          <mxGeometry height="100" width="180" x="-20" y="45" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-attrs" parent="sensor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- direcao_accao: Accao&#xa;- movimentos: int" vertex="1">
+          <mxGeometry height="40" width="180" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-line" parent="sensor-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="180" y="66" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-methods" parent="sensor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ __repr__()" vertex="1">
+          <mxGeometry height="26" width="180" y="74" as="geometry" />
+        </mxCell>
+        <mxCell id="observacao-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Observacao" vertex="1">
+          <mxGeometry height="110" width="200" x="290" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="observacao-attrs" parent="observacao-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- posicao_atual: tuple&#xa;- resultados_sensores: list" vertex="1">
+          <mxGeometry height="44" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="observacao-line" parent="observacao-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="200" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="observacao-methods" parent="observacao-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ __repr__()" vertex="1">
+          <mxGeometry height="32" width="200" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="&lt;&lt;abstract&gt;&gt;&#xa;Politica" vertex="1">
+          <mxGeometry height="90" width="220" x="-552" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-methods" parent="politica-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ decidirAccao(observacao): Accao" vertex="1">
+          <mxGeometry height="50" width="220" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-aleatoria-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="PoliticaAleatoria" vertex="1">
+          <mxGeometry height="110" width="220" x="-922" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-aleatoria-attrs" parent="politica-aleatoria-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- movimentos_possiveis: list" vertex="1">
+          <mxGeometry height="30" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-aleatoria-line" parent="politica-aleatoria-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-aleatoria-methods" parent="politica-aleatoria-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ decidirAccao(observacao): Accao" vertex="1">
+          <mxGeometry height="46" width="220" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-sensor-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="PoliticaFixa" vertex="1">
+          <mxGeometry height="110" width="220" x="-550" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-sensor-attrs" parent="politica-sensor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- fallback: Politica" vertex="1">
+          <mxGeometry height="30" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-sensor-line" parent="politica-sensor-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-sensor-methods" parent="politica-sensor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ decidirAccao(observacao): Accao" vertex="1">
+          <mxGeometry height="46" width="220" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-genetica-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="PoliticaRedeNeuronal" vertex="1">
+          <mxGeometry height="220" width="260" x="-572" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-genetica-attrs" parent="politica-genetica-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- net: NEATNetwork&#xa;- ambiente: AmbienteBase&#xa;- agente: AgenteBase" vertex="1">
+          <mxGeometry height="110" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-genetica-line" parent="politica-genetica-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="260" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="politica-genetica-methods" parent="politica-genetica-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ decidirAccao(observacao): Accao" vertex="1">
+          <mxGeometry height="76" width="260" y="144" as="geometry" />
+        </mxCell>
+        <!-- PoliticaRedeNeuronal uses Ambiente and Agente references -->
+        <mxCell id="politica-rede-ambiente-edge" value="1" edge="1" parent="1" source="politica-genetica-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="ambiente-base-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="220" as="sourcePoint" />
+            <mxPoint x="-210" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="politica-rede-agente-edge" value="1" edge="1" parent="1" source="politica-genetica-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="agente-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="210" as="sourcePoint" />
+            <mxPoint x="180" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agente-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="AgenteBase" vertex="1">
+          <mxGeometry height="200" width="220" x="-40" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="agente-attrs" parent="agente-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- id&#xa;- observacao_atual: Observacao&#xa;- politica: Politica&#xa;- sensores: list&#xa;- estado" vertex="1">
+          <mxGeometry height="80" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="agente-line" parent="agente-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="220" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="agente-methods" parent="agente-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ receberObservacao(obs)&#xa;+ escolherAccao(): Accao&#xa;+ age(): Accao&#xa;+ instala(sensor: Sensor)&#xa;+ comunicar(msg, destino)" vertex="1">
+          <mxGeometry height="86" width="220" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-base-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="&lt;&lt;abstract&gt;&gt;&#xa;AmbienteBase" vertex="1">
+          <mxGeometry height="154" width="240" x="-50" y="874" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-base-attrs" parent="ambiente-base-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- largura: int&#xa;- altura: int" vertex="1">
+          <mxGeometry height="40" width="240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-base-line" parent="ambiente-base-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-base-methods" parent="ambiente-base-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ observacaoPara(agente)&#xa;+ agir(accao, agente)&#xa;+ atualizacao()&#xa;+ recompensaPara(agente)" vertex="1">
+          <mxGeometry height="66" width="240" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-farol-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="AmbienteFarol" vertex="1">
+          <mxGeometry height="264" width="280" x="-582" y="819" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-farol-attrs" parent="ambiente-farol-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- farol: tuple&#xa;- posicoes_agentes: dict&#xa;- passo_atual: int&#xa;- historico_paths: dict" vertex="1">
+          <mxGeometry height="74" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-farol-line" parent="ambiente-farol-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="280" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-farol-methods" parent="ambiente-farol-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ adicionar_agente(agente, pos)&#xa;+ observacaoPara(agente): Observacao&#xa;+ agir(accao, agente)&#xa;+ atualizacao()&#xa;+ recompensaPara(agente): float&#xa;+ agente_no_farol(agente): bool&#xa;+ get_estado_visualizacao(): dict&#xa;+ reset()&#xa;+ get_behavior(agente): set&#xa;+ get_objective_fitness(agente): float" vertex="1">
+          <mxGeometry height="156" width="280" y="108" as="geometry" />
+        </mxCell>
+        <!-- AmbienteMaze Class -->
+        <mxCell id="ambiente-maze-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="AmbienteMaze" vertex="1">
+          <mxGeometry height="240" width="300" x="-120" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-maze-attrs" parent="ambiente-maze-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- farol: tuple&#xa;- posicoes_agentes: dict&#xa;- passo_atual: int&#xa;- historico_paths: dict&#xa;- obstaculos: list&#xa;- dificuldade: int" vertex="1">
+          <mxGeometry height="90" width="300" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-maze-line" parent="ambiente-maze-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="300" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="ambiente-maze-methods" parent="ambiente-maze-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ construir_maze(dificuldade)&#xa;+ adicionar_obstaculos(dificuldade)&#xa;+ get_inputs_neurais(agente): list&#xa;+ agir(accao, agente)&#xa;+ observacaoPara(agente): Observacao&#xa;+ posicoes_sondadas(sensor, pos): list&#xa;+ agente_no_farol(agente): bool&#xa;+ reset()" vertex="1">
+          <mxGeometry height="128" width="300" y="124" as="geometry" />
+        </mxCell>
+
+        <!-- Obstaculo Class -->
+        <mxCell id="obstaculo-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Obstaculo" vertex="1">
+          <mxGeometry height="100" width="200" x="220" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="obstaculo-attrs" parent="obstaculo-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- dx: int&#xa;- dy: int" vertex="1">
+          <mxGeometry height="44" width="200" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="obstaculo-methods" parent="obstaculo-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ inserir(ambiente)&#xa;+ colocar(dif, ambiente)" vertex="1">
+          <mxGeometry height="36" width="200" y="74" as="geometry" />
+        </mxCell>
+
+        <!-- Inheritance: AmbienteBase <- AmbienteMaze -->
+        <mxCell id="ambiente-maze-inherit" edge="1" parent="1" source="ambiente-maze-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;dashed=1;" target="ambiente-base-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-200" y="880" as="sourcePoint" />
+            <mxPoint x="-330" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- AmbienteFarol has Obstaculos -->
+        <mxCell id="ambiente-farol-obstaculos-edge" value="0..*" edge="1" parent="1" source="ambiente-farol-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="obstaculo-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-200" y="840" as="sourcePoint" />
+            <mxPoint x="220" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- AmbienteMaze has Obstaculos -->
+        <mxCell id="ambiente-maze-obstaculos-edge" value="0..*" edge="1" parent="1" source="ambiente-maze-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="obstaculo-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60" y="840" as="sourcePoint" />
+            <mxPoint x="220" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- AmbienteMaze has Agentes -->
+        <mxCell id="ambiente-maze-agente-edge" value="0..*" edge="1" parent="1" source="ambiente-maze-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="agente-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-120" y="700" as="sourcePoint" />
+            <mxPoint x="180" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NoveltyArchive Class -->
+        <mxCell id="novelty-archive-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="NoveltyArchive" vertex="1">
+          <mxGeometry height="110" width="280" x="760" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="novelty-archive-attrs" parent="novelty-archive-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- archive: list&#xa;- k: int&#xa;- threshold: float&#xa;- decay_rate: float&#xa;- limit: int" vertex="1">
+          <mxGeometry height="64" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="novelty-archive-methods" parent="novelty-archive-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ calcular_novelty(pos, populacao): float&#xa;+ tentar_adicionar(pos, score): bool&#xa;+ decair()" vertex="1">
+          <mxGeometry height="36" width="280" y="90" as="geometry" />
+        </mxCell>
+        <!-- TreinoNEAT Class -->
+        <mxCell id="treino-neat-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="TreinoNEAT" vertex="1">
+          <mxGeometry height="140" width="300" x="500" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="treino-neat-attrs" parent="treino-neat-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- config_file: str&#xa;- max_passos: int&#xa;- geracoes: int&#xa;- novelty_archive: NoveltyArchive" vertex="1">
+          <mxGeometry height="70" width="300" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="treino-neat-methods" parent="treino-neat-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ run(): Genome&#xa;+ eval_genomes(genomes, config)&#xa;+ visualizar_vencedor(genome)" vertex="1">
+          <mxGeometry height="48" width="300" y="96" as="geometry" />
+        </mxCell>
+
+        <!-- TreinoNEAT uses NoveltyArchive -->
+        <mxCell id="treino-neat-novelty-edge" value="1" edge="1" parent="1" source="treino-neat-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="novelty-archive-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="750" as="sourcePoint" />
+            <mxPoint x="760" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- NoveltyArchive contains positions/observations -->
+        <mxCell id="novelty-archive-observacao-edge" value="0..*" edge="1" parent="1" source="novelty-archive-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="observacao-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="820" as="sourcePoint" />
+            <mxPoint x="490" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="motor-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="MotorDeSimulacao" vertex="1">
+          <mxGeometry height="184" width="280" x="-70" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="motor-attrs" parent="motor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- ambiente: AmbienteBase&#xa;- agentes: list&#xa;- visualizador: Visualizador&#xa;- terminado: bool" vertex="1">
+          <mxGeometry height="64" width="280" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="motor-line" parent="motor-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="280" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="motor-methods" parent="motor-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ cria(ficheiro): MotorDeSimulacao&#xa;+ adicionar_agente_programatico(agente, pos)&#xa;+ reset()&#xa;+ listaAgentes(): list&#xa;+ executa(max_passos, visualizar)" vertex="1">
+          <mxGeometry height="86" width="280" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="visualizador-class" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" value="Visualizador" vertex="1">
+          <mxGeometry height="124" width="220" x="348" y="589" as="geometry" />
+        </mxCell>
+        <mxCell id="visualizador-attrs" parent="visualizador-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="- tamanho: int&#xa;- janela&#xa;- canvas" vertex="1">
+          <mxGeometry height="50" width="220" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="visualizador-line" parent="visualizador-class" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=top;spacingTop=-1;spacingLeft=4;spacingRight=4;rotatable=0;labelPosition=right;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;" vertex="1">
+          <mxGeometry height="8" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="visualizador-methods" parent="visualizador-class" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" value="+ desenhar(estado: dict)&#xa;+ manter_janela_aberta()" vertex="1">
+          <mxGeometry height="40" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="sensor-accao-edge" value="1" edge="1" parent="1" source="sensor-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;dashPattern=1 4;strokeWidth=2;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="accao-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="160" as="sourcePoint" />
+            <mxPoint x="90" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agente-sensor-edge" value="0..*" edge="1" parent="1" source="agente-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="sensor-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="310" as="sourcePoint" />
+            <mxPoint x="250" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agente-politica-edge" value="1" edge="1" parent="1" source="agente-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="politica-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="290" as="sourcePoint" />
+            <mxPoint x="760" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="politica-aleatoria-inherit" edge="1" parent="1" source="politica-aleatoria-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;dashed=1;" target="politica-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="738" y="175" as="sourcePoint" />
+            <mxPoint x="738" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="politica-sensor-inherit" edge="1" parent="1" source="politica-sensor-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;dashed=1;" target="politica-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="848" y="175" as="sourcePoint" />
+            <mxPoint x="998" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="politica-genetica-inherit" edge="1" parent="1" source="politica-genetica-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;dashed=1;" target="politica-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="848" y="175" as="sourcePoint" />
+            <mxPoint x="1278" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ambiente-farol-inherit" edge="1" parent="1" source="ambiente-farol-methods" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;startArrow=none;dashed=1;exitX=1.008;exitY=0.158;exitDx=0;exitDy=0;exitPerimeter=0;" target="ambiente-base-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-220" y="951" as="sourcePoint" />
+            <mxPoint x="-330" y="494" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="motor-ambiente-edge" value="0..1" edge="1" parent="1" source="motor-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="ambiente-base-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-70" y="624" as="sourcePoint" />
+            <mxPoint x="-210" y="494" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="motor-agentes-edge" value="0..*" edge="1" parent="1" source="motor-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="agente-class">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="560" />
+              <mxPoint x="70" y="560" />
+            </Array>
+            <mxPoint x="610" y="510" as="sourcePoint" />
+            <mxPoint x="180" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="motor-visualizador-edge" value="0..1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=none;startFill=0;entryX=0.001;entryY=0.692;entryDx=0;entryDy=0;entryPerimeter=0;" target="visualizador-attrs">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="348" y="651" />
+            </Array>
+            <mxPoint x="210" y="651" as="sourcePoint" />
+            <mxPoint x="320" y="651" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agente-observacao-edge" value="0..1" edge="1" parent="1" source="agente-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;dashPattern=1 4;strokeWidth=2;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="observacao-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="310" as="sourcePoint" />
+            <mxPoint x="490" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="observacao-sensor-edge" value="0..*" edge="1" parent="1" source="observacao-class" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=0;dashPattern=1 4;strokeWidth=2;endArrow=none;endFill=0;startArrow=none;startFill=0;" target="sensor-class">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="100" as="sourcePoint" />
+            <mxPoint x="340" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

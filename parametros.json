@@ -1,0 +1,24 @@
+{
+  "ambiente": {
+    "tipo": "farol",
+    "largura": 15,
+    "altura": 10,
+    "dificuldade": 2
+  },
+  "agentes": [ 
+      {
+      "id": 3,
+      "posicao_inicial": [1, 1],
+      "politica": {
+        "tipo": "fixa",
+        "ficheiro": "vencedor_QL.pkl" 
+      },
+      "sensores": [
+        { "direcao": [1, 0], "movimentos": 1 },
+        { "direcao": [-1, 0], "movimentos": 1 },
+        { "direcao": [0, 1], "movimentos": 1 },
+        { "direcao": [0, -1], "movimentos": 1 }
+      ]
+    }
+  ]
+}
