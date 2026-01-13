@@ -60,7 +60,6 @@ Para testar os agentes e visualizar a simulação, deve configurar o ficheiro `p
 Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme o teste desejado. Abaixo estão exemplos de configuração para os cenários mais importantes.
 
 #### A. Testar NEAT no Labirinto Mais Difícil (Maze 4)
-Este teste demonstra a capacidade do Novelty Search em resolver labirintos complexos.
 
 ```json
 {
@@ -72,14 +71,14 @@ Este teste demonstra a capacidade do Novelty Search em resolver labirintos compl
     {
       "id": 1,
       "politica": {
-        "tipo": "rede_neuronal",
+        "tipo": "aprendizagem",
         "ficheiro": "vencedor_MAZE4.pkl"
       }
     }
   ]
 }
 `````
-#### Testar Q-Learning no Problema do Farol
+#### B. Testar Q-Learning no Problema do Farol
 ```json
 {
   "ambiente": {
@@ -106,6 +105,34 @@ Este teste demonstra a capacidade do Novelty Search em resolver labirintos compl
   ]
 }
 `````
+#### C. Testar Fixo no Problema do Faro
+```json
+{
+  "ambiente": {
+    "tipo": "farol",
+    "largura": 15,
+    "altura": 10,
+    "dificuldade": 3
+  },
+  "agentes": [ 
+      {
+      "id": 3,
+      "posicao_inicial": [1, 1],
+      "politica": {
+        "tipo": "fixa",
+        "ficheiro": "vencedor_QL.pkl" 
+      },
+      "sensores": [
+        { "direcao": [1, 0], "movimentos": 1 },
+        { "direcao": [-1, 0], "movimentos": 1 },
+        { "direcao": [0, 1], "movimentos": 1 },
+        { "direcao": [0, -1], "movimentos": 1 }
+      ]
+    }
+  ]
+}
+`````
+
 
 ### Passo 2: Executar
 Após guardar as alterações no ficheiro JSON, corra o comando:
