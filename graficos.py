@@ -14,7 +14,7 @@ import neat
 
 # Configurações globais
 NUM_SIMULACOES = 10
-NUM_EPISODIOS = 2
+NUM_EPISODIOS = 30
 MAX_PASSOS = 100
 cores = ["blue", "red", "green", "orange", "purple", "pink"]
 

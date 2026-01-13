@@ -47,7 +47,6 @@ class MotorDeSimulacao:
                 dificuldade = params_ambiente.get('dificuldade', 2),
             )
         else:
-            # No futuro, podes adicionar "maze" aqui
             raise ValueError(f"Tipo de ambiente desconhecido: {tipo_amb}")
         
         

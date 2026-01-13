@@ -10,7 +10,7 @@
       "id": 3,
       "posicao_inicial": [1, 1],
       "politica": {
-        "tipo": "fixa",
+        "tipo": "red",
         "ficheiro": "vencedor_QL.pkl" 
       },
       "sensores": [
