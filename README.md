@@ -65,7 +65,7 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
 {
   "ambiente": {
     "tipo": "maze",
-    "dificuldade": 4
+    "dificuldade": 4,
     "_comentario": "Não necessário altura e largura pois o maze nao depende disso, mas sim de ficheiros .txt pré-feitos"
   },
   "agentes": [
@@ -126,7 +126,7 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
       "id": 3,
       "posicao_inicial": [1, 1],
       "politica": {
-        "tipo": "fixa"
+        "tipo": "fixa",
         "_comentario": "Não necessário ficheiro pois a política fixa nao necessita disso"
       },
       "sensores": [
