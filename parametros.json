@@ -1,17 +1,16 @@
 {
   "ambiente": {
-    "tipo": "farol",
-    "largura": 15,
-    "altura": 10,
-    "dificuldade": 2
+    "tipo": "maze",
+    "dificuldade": 1,
+    "_comentario": "Não necessário altura e largura pois o maze nao depende disso, mas sim de ficheiros .txt pré-feitos"
   },
-  "agentes": [ 
-      {
-      "id": 3,
+  "agentes": [
+    {
+      "id": 1, 
       "posicao_inicial": [1, 1],
       "politica": {
-        "tipo": "red",
-        "ficheiro": "vencedor_QL.pkl" 
+        "tipo": "qlearning",
+        "ficheiro": "vencedor_MAZE1QL.pkl"
       },
       "sensores": [
         { "direcao": [1, 0], "movimentos": 1 },

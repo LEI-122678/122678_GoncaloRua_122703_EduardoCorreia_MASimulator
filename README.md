@@ -71,6 +71,7 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
   "agentes": [
     {
       "id": 1,
+      "posicao_inicial": [1, 1],
       "politica": {
         "tipo": "aprendizagem",
         "ficheiro": "vencedor_MAZE4.pkl"

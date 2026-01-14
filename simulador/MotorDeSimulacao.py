@@ -122,8 +122,8 @@ class MotorDeSimulacao:
                 agente.instala(sensor)
             
             # Adicionar Agente ao Motor e Ambiente
-            simulador.agentes.append(agente)
-            pos_inicial = tuple(params_agente.get('posicao_inicial', [0, 0]))
+            simulador.agentes.append(agente)    
+            pos_inicial = tuple(params_agente.get('posicao_inicial', [1, 1]))
             simulador.ambiente.adicionar_agente(agente, pos_inicial)
             
         simulador.ambiente.adicionar_obstaculos(simulador.ambiente.dificuldade)
