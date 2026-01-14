@@ -59,13 +59,14 @@ Para testar os agentes e visualizar a simulação, deve configurar o ficheiro `p
 ### Passo 1: Configurar o Cenário
 Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme o teste desejado. Abaixo estão exemplos de configuração para os cenários mais importantes.
 
-#### A. Testar NEAT no Labirinto Mais Difícil (Maze 4)
+#### A. Testar Política NEAT no Labirinto Mais Difícil (Maze 4)
 
 ```json
 {
   "ambiente": {
     "tipo": "maze",
     "dificuldade": 4
+    "_comentario": "Não necessário altura e largura pois o maze nao depende disso, mas sim de ficheiros .txt pré-feitos"
   },
   "agentes": [
     {
@@ -73,12 +74,18 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
       "politica": {
         "tipo": "aprendizagem",
         "ficheiro": "vencedor_MAZE4.pkl"
-      }
+      },
+      "sensores": [
+        { "direcao": [1, 0], "movimentos": 1 },
+        { "direcao": [-1, 0], "movimentos": 1 },
+        { "direcao": [0, 1], "movimentos": 1 },
+        { "direcao": [0, -1], "movimentos": 1 }
+      ]
     }
   ]
 }
 `````
-#### B. Testar Q-Learning no Problema do Farol
+#### B. Testar Política Q-Learning no Problema do Farol
 ```json
 {
   "ambiente": {
@@ -105,7 +112,7 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
   ]
 }
 `````
-#### C. Testar Fixo no Problema do Faro
+#### C. Testar Política Fixa no Problema do Faro
 ```json
 {
   "ambiente": {
@@ -119,8 +126,8 @@ Abra o ficheiro `parametros.json` na raiz do projeto e edite os campos conforme 
       "id": 3,
       "posicao_inicial": [1, 1],
       "politica": {
-        "tipo": "fixa",
-        "ficheiro": "vencedor_QL.pkl" 
+        "tipo": "fixa"
+        "_comentario": "Não necessário ficheiro pois a política fixa nao necessita disso"
       },
       "sensores": [
         { "direcao": [1, 0], "movimentos": 1 },
