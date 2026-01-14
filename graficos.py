@@ -13,15 +13,15 @@ import numpy as np
 import neat 
 
 # Configurações globais
-NUM_SIMULACOES = 10
-NUM_EPISODIOS = 30
+NUM_SIMULACOES = 30
+NUM_EPISODIOS = 3
 MAX_PASSOS = 100
 cores = ["blue", "red", "green", "orange", "purple", "pink"]
 
 if __name__ == "__main__":
-    # Teste inicial (comente se não for necessário)
+
     ambientes = {
-        "FAROL": {"dificuldades": range(1, 6), "num_sim": 2},
+        "FAROL": {"dificuldades": range(1, 6), "num_sim": NUM_SIMULACOES},
         "MAZE": {"dificuldades": range(1, 5), "num_sim": 1}
     }
 
