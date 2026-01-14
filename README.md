@@ -154,14 +154,14 @@ python main.py
 Se desejar treinar novos agentes de raiz em vez de usar os modelos pré-treinados:
 
 ### Treino com Q-Learning
-Abra o ficheiro treino_qlearning.py, ajuste a variável USAR_MAZE (True ou False) conforme o ambiente desejado e execute:
+Abra o ficheiro treino_qlearning.py, ajuste a variável USAR_MAZE (True ou False), e DIFICULDADE = 1 a 4, conforme o ambiente desejado e execute:
 
 ```bash
 python treino_qlearning.py
 `````
 
 ### Treino com NEAT (Redes Neuronais)
-Abra o ficheiro treino_neat.py, ajuste a configuração USAR_MAZE e execute:
+Abra o ficheiro treino_neat.py, ajuste a configuração USAR_MAZE e DIFICULDADE e execute:
 
 ```bash
 python treino_neat.py
